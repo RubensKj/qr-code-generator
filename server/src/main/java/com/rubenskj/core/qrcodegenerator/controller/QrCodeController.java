@@ -1,8 +1,10 @@
 package com.rubenskj.core.qrcodegenerator.controller;
 
+import com.google.zxing.WriterException;
 import com.rubenskj.core.qrcodegenerator.dto.QRCodeTicket;
 import com.rubenskj.core.qrcodegenerator.dto.QrCodeDTO;
 import com.rubenskj.core.qrcodegenerator.service.QrCodeService;
+import com.rubenskj.core.qrcodegenerator.util.FileUtil;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +28,7 @@ public class QrCodeController {
 
     @PostMapping(value = "/generate")
     @ResponseBody
-    public QRCodeTicket generateQRCode(@Valid @RequestBody QrCodeDTO qrCodeDTO) throws Exception {
+    public QRCodeTicket generateQRCode(@Valid @RequestBody QrCodeDTO qrCodeDTO) throws WriterException {
         return this.qrCodeService.generateQRCodeImage(qrCodeDTO);
     }
 
@@ -40,7 +42,8 @@ public class QrCodeController {
         BufferedImage qrCodeFromTicket = this.qrCodeService.getQrCodeFromTicket(uuid);
 
         return ResponseEntity.ok()
-                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=qrcode.png")
+                .contentType(MediaType.IMAGE_PNG)
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + uuid.concat(FileUtil.PNG_EXTENSION) + "\"")
                 .body(qrCodeFromTicket);
     }
 }

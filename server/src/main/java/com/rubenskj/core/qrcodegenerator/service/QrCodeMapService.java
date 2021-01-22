@@ -3,11 +3,7 @@ package com.rubenskj.core.qrcodegenerator.service;
 import org.springframework.stereotype.Service;
 
 import java.awt.image.BufferedImage;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.*;
 
 @Service
 public class QrCodeMapService {
@@ -19,7 +15,7 @@ public class QrCodeMapService {
     }
 
     public List<BufferedImage> findAll() {
-        return QR_CODES_GENERATED.values().stream().collect(Collectors.toList());
+        return new ArrayList<>(QR_CODES_GENERATED.values());
     }
 
     public Optional<BufferedImage> getQRCodeByTicket(String uuid) {
@@ -30,5 +26,9 @@ public class QrCodeMapService {
         }
 
         return Optional.of(bufferedImage);
+    }
+
+    public void reset() {
+        QR_CODES_GENERATED.clear();
     }
 }
