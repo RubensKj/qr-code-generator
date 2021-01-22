@@ -18,6 +18,7 @@
 
 # 🐦 Direct Links
  * 🏗 [Development](#building_construction-Development)
+ * 🚀 [About](#rocket-about)
  * 📕 [License](#closed_book-license)
 
 
@@ -29,6 +30,11 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [styled-components](https://styled-components.com/)
 
+# :rocket: About
+
+You can reach the frontend application by accessing [QR Code Generator Front](https://qr-code-generator.rubenskj.vercel.app/)
+
+In case you want to access in order to see how is works [QR Code Generator Back](https://gr-code-generator-api.herokuapp.com/)
 
 # :closed_book: License
 
