@@ -31,6 +31,7 @@ const Card: React.FC = () => {
 
     if (!qrContent) {
       setError('Please write some content');
+      return;
     }
 
     let data = {
