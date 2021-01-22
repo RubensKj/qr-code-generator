@@ -41,6 +41,8 @@ const Card: React.FC = () => {
 
     api.post<QRCode>('/qrcode/generate', data).then(response => {
       setQRCode(response.data);
+
+      handleClearForm();
     }).catch(error => {
       if (error.errors) {
         setError(error.errors[0].defaultMessage);
