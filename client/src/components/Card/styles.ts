@@ -50,7 +50,7 @@ export const Input = styled.input`
   padding: 0 8px;
 
   border-radius: 4px;
-  border: 1px solid #ecebed;
+  border: 1px solid #c2bec5;
 `;
 
 export const Button = styled.button`
@@ -98,7 +98,7 @@ export const QRCodeArea = styled.div`
   margin-bottom: 24px;
 
   border-radius: 4px;
-  border: 1px dashed #ecebed;
+  border: 1px dashed #c2bec5;
 
   img {
     width: 100%;
