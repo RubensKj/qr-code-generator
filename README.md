@@ -6,7 +6,7 @@
 [![Stars](https://img.shields.io/github/stars/RubensKj/qr-code-generator?color=00cc74&style=flat-square)](https://github.com/RubensKj/qr-code-generator/stargazers)
 [![Forks](https://img.shields.io/github/forks/RubensKj/qr-code-generator?color=00cc74&style=flat-square)](https://github.com/RubensKj/qr-code-generator/network/members)
 [![Contributors](https://img.shields.io/github/contributors/RubensKj/qr-code-generator?color=00cc74&style=flat-square)](https://github.com/RubensKj/qr-code-generator/graphs/contributors)
-![API Deployment](https://github.com/RubensKj/qr-code-generator/workflows/API Deploy/badge.svg)
+![API Deployment](https://github.com/RubensKj/qr-code-generator/workflows/API%20Deploy/badge.svg)
 
 
 > A simple qr generator
